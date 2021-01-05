@@ -20,9 +20,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "format": "prettier-standard --format",
-    "eject": "react-scripts eject",
-    "precommit": "lint-staged"
+    "lint": "prettier-standard",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -42,12 +41,14 @@
       "last 1 safari version"
     ]
   },
-  "lint-staged": {
-    "*": [
-      "prettier-standard --lint"
-    ]
-  },
   "devDependencies": {
+    "husky": "^4.3.6",
     "prettier-standard": "^16.4.1"
-  }
+  },
+    "husky": {
+      "hooks": {
+        "pre-commit": "npm run lint",
+        "pre-push": "npm test"
+      }
+    }
 }
