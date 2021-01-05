@@ -20,7 +20,9 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "format": "prettier-standard --format",
+    "eject": "react-scripts eject",
+    "precommit": "lint-staged"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +41,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "lint-staged": {
+    "*": [
+      "prettier-standard --lint"
+    ]
+  },
+  "devDependencies": {
+    "prettier-standard": "^16.4.1"
   }
 }
