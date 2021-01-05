@@ -45,10 +45,9 @@
     "husky": "^4.3.6",
     "prettier-standard": "^16.4.1"
   },
-    "husky": {
-      "hooks": {
-        "pre-commit": "npm run lint",
-        "pre-push": "npm test"
-      }
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
     }
+  }
 }
